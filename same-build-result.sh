@@ -121,7 +121,7 @@ if test -n "$OTHERDIR"; then
     # Remove durations from progress reports
     sed -i -e "
     /: W: filename-too-long-for-joliet /d
-    /: I: \(filelist-initialization\|check-completed\) /s| [0-9]\+\.[0-9] s| x.x s|
+    /: I: \(filelist-initialization\|check-completed\) /s|[ 0-9]\+\.[0-9] s| x.x s|
     " $file1 $file2
     if ! cmp -s $file1 $file2; then
       echo "rpmlint.log files differ:"
